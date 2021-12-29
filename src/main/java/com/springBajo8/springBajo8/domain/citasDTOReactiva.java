@@ -5,6 +5,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.time.LocalDate;
 import java.util.Date;
+import java.util.List;
 import java.util.UUID;
 
 @Document(collection = "citas")
@@ -28,6 +29,16 @@ public class citasDTOReactiva {
     private String horaReservaCita;
 
     private String estadoReservaCita;
+
+    private List<PadecimientoTratamiento> tratamientosList;
+
+    public List<PadecimientoTratamiento> getTratamientosList() {
+        return tratamientosList;
+    }
+
+    public void setTratamientosList(List<PadecimientoTratamiento> tratamientosList) {
+        this.tratamientosList = tratamientosList;
+    }
 
     public String getId() {
         return id;
