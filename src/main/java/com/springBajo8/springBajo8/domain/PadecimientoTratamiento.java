@@ -1,20 +1,31 @@
 package com.springBajo8.springBajo8.domain;
 
 public class PadecimientoTratamiento {
-    private final String padecimiento;
-    private final String Tratamiento;
+    private  String padecimiento;
+    private  String Tratamiento;
 
     public PadecimientoTratamiento(String padecimiento, String tratamiento) {
         this.padecimiento = padecimiento;
         Tratamiento = tratamiento;
     }
 
+    public PadecimientoTratamiento() {
+    }
+
     public String getPadecimiento() {
         return padecimiento;
     }
 
+    public void setPadecimiento(String padecimiento) {
+        this.padecimiento = padecimiento;
+    }
+
     public String getTratamiento() {
         return Tratamiento;
+    }
+
+    public void setTratamiento(String tratamiento) {
+        Tratamiento = tratamiento;
     }
 
     @Override

@@ -61,9 +61,8 @@ public class citasReactivaResource {
 
     @GetMapping("/consultarFechaHora/{fecha}/{hora}")
     private Flux<citasDTOReactiva> consultarFechaHora(@PathVariable("fecha") String fecha, @PathVariable("hora") String hora) {
-
-
-        return this.icitasReactivaService.consultarFechaYHora(fecha, hora);
+        LocalDate fechaParseada = LocalDate.parse(fecha);
+        return this.icitasReactivaService.consultarFechaYHora(fechaParseada, hora);
     }
 
     @GetMapping("/consultarMedico/{idPaciente}/byidPaciente")
