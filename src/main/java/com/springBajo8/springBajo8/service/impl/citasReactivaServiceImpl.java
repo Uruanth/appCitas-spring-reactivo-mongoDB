@@ -86,7 +86,6 @@ public class citasReactivaServiceImpl implements IcitasReactivaService {
                             citasDTOReactiva newCitaDTO = new citasDTOReactiva();
                             newCitaDTO.setNombreMedico(citasDTOReactiva1.getNombreMedico());
                             newCitaDTO.setApellidosMedico(citasDTOReactiva1.getApellidosMedico());
-                            System.out.println(newCitaDTO);
                             return Mono.just(newCitaDTO);
                         }
                 )
