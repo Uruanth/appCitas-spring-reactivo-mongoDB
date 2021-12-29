@@ -54,7 +54,7 @@ public class citasReactivaResource {
     }
 
 
-    @GetMapping("/cancelarCita/{id}/byidPaciente")
+    @PutMapping("/cancelarCita/{id}/byidPaciente")
     private Mono<citasDTOReactiva> cancelarCitaByidPaciente(@PathVariable("idPaciente") String idPaciente) {
         return this.icitasReactivaService.cancelarCita(idPaciente);
     }
