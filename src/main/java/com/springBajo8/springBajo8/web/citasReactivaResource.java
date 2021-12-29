@@ -54,7 +54,7 @@ public class citasReactivaResource {
     }
 
 
-    @GetMapping("/cancelarCita/{idPaciente}/byidPaciente")
+    @GetMapping("/cancelarCita/{id}/byidPaciente")
     private Mono<citasDTOReactiva> cancelarCitaByidPaciente(@PathVariable("idPaciente") String idPaciente) {
         return this.icitasReactivaService.cancelarCita(idPaciente);
     }
@@ -65,12 +65,12 @@ public class citasReactivaResource {
         return this.icitasReactivaService.consultarFechaYHora(fechaParseada, hora);
     }
 
-    @GetMapping("/consultarMedico/{idPaciente}/byidPaciente")
+    @GetMapping("/consultarMedico/{id}/byidPaciente")
     private Mono<citasDTOReactiva> consultarMedicoByIdPaciente(@PathVariable("idPaciente") String idPaciente) {
         return this.icitasReactivaService.consultarMedicoQueLoAtendera(idPaciente);
     }
 
-    @GetMapping("/consultarTratamiento/{idPaciente}/byidPaciente")
+    @GetMapping("/consultarTratamiento/{id}/byidPaciente")
     private Mono<List<PadecimientoTratamiento>> consultarTratamientoByIdPaciente(@PathVariable("idPaciente") String idPaciente) {
         return this.icitasReactivaService.consultarTratamientosYPadecimientos(idPaciente);
     }
