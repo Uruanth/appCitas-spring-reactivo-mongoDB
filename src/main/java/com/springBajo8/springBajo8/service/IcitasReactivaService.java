@@ -22,11 +22,11 @@ public interface IcitasReactivaService {
 
     Mono<citasDTOReactiva> findById(String id);
 
-    Mono<citasDTOReactiva> cancelarCita(String id);
+    Flux<citasDTOReactiva> cancelarCita(String id);
 
     Flux<citasDTOReactiva> consultarFechaYHora(LocalDate fecha, String hora);
 
-    Mono<citasDTOReactiva> consultarMedicoQueLoAtendera(String id);
+    Flux<citasDTOReactiva> consultarMedicoQueLoAtendera(String id);
 
-    Mono<List<PadecimientoTratamiento>> consultarTratamientosYPadecimientos(String id);
+    Flux<List<PadecimientoTratamiento>> consultarTratamientosYPadecimientos(String id);
 }
